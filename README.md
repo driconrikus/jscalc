@@ -12,7 +12,7 @@ This is a basic calculator made with HTML, CSS and JavaScript.
 - Clear
 
 ## Bugs:
-- Clicking an operator after clearing displays "undefined".
+- ~Clicking an operator after clearing displays "undefined"~ Fixed as of commit af70a31.
 - Large numbers go over the screen.
 
 ## Preview:
