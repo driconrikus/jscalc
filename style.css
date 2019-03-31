@@ -142,3 +142,15 @@ body {
 .clear button:active {
     background-color: #1a1a1a !important;
 }
+
+#kbd {
+    width: 28px;
+    height: 28px;
+    float: right;
+    margin-top: -40px;
+    margin-right: 10px;
+}
+
+#kbd:hover {
+    display: block;
+}
