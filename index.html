@@ -6,6 +6,7 @@
     <title>JSCalc</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <link rel="favicon" type="icon" href="favicon.ico">
     <script src="main.js" async></script>
 </head>
 <body>
@@ -18,28 +19,28 @@
         </div>
         <div class="calcButtons">
                 <div id="numbers">
-                        <button class="ac" data-key="c">AC</button>
-                        <button class="del" data-key="Backspace">DEL</button>
-                        <button class="plusminus" data-key="-">+/-</button>
-                        <button class="num" data-key="7">7</button>
-                        <button class="num" data-key="8">8</button>
-                        <button class="num" data-key="9">9</button>
-                        <button class="num" data-key="4">4</button>
-                        <button class="num" data-key="5">5</button>
-                        <button class="num" data-key="6">6</button>
-                        <button class="num" data-key="1">1</button>
-                        <button class="num" data-key="2">2</button>
-                        <button class="num" data-key="3">3</button>
-                        <button class="num-zero" data-key="0">0</button>
-                        <button class="period" data-key=".">.</button>
+                        <button class="clear" onclick="clickClear()">C</button>
+                        <button class="plusminus" onclick="clickPlusMinus()">±</button>
+                        <button class="remainder" onclick="clickRemainder()">%</button>
+                        <button class="num" onclick="clickDigit(7)">7</button>
+                        <button class="num" onclick="clickDigit(8)">8</button>
+                        <button class="num" onclick="clickDigit(9)">9</button>
+                        <button class="num" onclick="clickDigit(4)">4</button>
+                        <button class="num" onclick="clickDigit(5)">5</button>
+                        <button class="num" onclick="clickDigit(6)">6</button>
+                        <button class="num" onclick="clickDigit(1)">1</button>
+                        <button class="num" onclick="clickDigit(2)">2</button>
+                        <button class="num" onclick="clickDigit(3)">3</button>
+                        <button class="num-zero" onclick="clickDigit(0)">0</button>
+                        <button class="period" onclick="clickPeriod()">.</button>
                         
                     </div>
                     <div id="operators">
-                        <button class="operator" data-key="/">÷</button>
-                        <button class="operator" data-key="*">x</button>
-                        <button class="operator" data-key="-">-</button>
-                        <button class="operator" data-key="+">+</button>
-                        <button class="equals" data-key="Enter">=</button>
+                        <button class="operator"  onclick="clickOperator('divide')">÷</button>
+                        <button class="operator"  onclick="clickOperator('multiply')">x</button>
+                        <button class="operator"  onclick="clickOperator('substract')">-</button>
+                        <button class="operator"  onclick="clickOperator('add')">+</button>
+                        <button class="equals"  onclick="clickEquals()">=</button>
         </div>
         </div>
     </div>
