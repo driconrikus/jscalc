@@ -2,7 +2,7 @@
 
 This is a basic calculator made with HTML, CSS and JavaScript.
 
-## What's working
+## What's working:
 - Addition
 - Substraction
 - Multiply
@@ -12,7 +12,8 @@ This is a basic calculator made with HTML, CSS and JavaScript.
 - Clear
 
 ## Bugs:
-- Large numbers go over the screen
+- Clicking an operator after clearing displays "undefined".
+- Large numbers go over the screen.
 
 ## Preview:
 
