@@ -6,7 +6,6 @@ let divide = (a, b) => b === 0 ? NaN : Math.floor(a*10000/b)/10000;
 let operate = (operator, a, b) => operations[operator](a,b);
 
 // global variables
-let buttons = document.querySelector('.calcButtons');
 let currentNumber;
 let storedNumber;
 let result;
@@ -14,7 +13,7 @@ let digitAfterPeriod;
 let pendingOperation;
 const screenInput = document.querySelector('#input');
 const screenOperation = document.querySelector('#output');
-const calcButtons = document.querySelector('.calcButtons');
+const maxDisplay = 10;
 const operations = {add, substract, multiply, divide};
 const operationToSymbol = {
     add: '+',
@@ -54,7 +53,7 @@ function clickPeriod() {
 
 function clickClear() {
     currentNumber = undefined;
-    storedNumber = undefined;
+    storedNumber = 0;
     result = undefined;
     pendingOperation = '';
     digitAfterPeriod = 0;
