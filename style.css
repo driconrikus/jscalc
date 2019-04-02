@@ -5,7 +5,7 @@ body {
 
 .calcBody {
     height: 500px;
-    width: 385px;
+    width: 375px;
     background-color: #1a1a1a;
     margin: auto;
     padding-top: 50px;
@@ -46,14 +46,14 @@ body {
 
 
 #input {
-    font-size: 64px;
+    font-size: 48px;
     float: right;
     margin-top: 5px;
     margin-right: 8px;
 }
 
 #output {
-    font-size: 48px;
+    font-size: 32px;
     float: right;
     margin-top: 10px;
     margin-right: 8px;

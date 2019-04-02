@@ -60,7 +60,7 @@ function clickClear() {
     pendingOperation = '';
     digitAfterPeriod = 0;
     displayStoredContent('');
-    displayCurrentNumber('0');
+    displayCurrentNumber('');
 }
 
 // Plus minus button input.
