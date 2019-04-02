@@ -10,6 +10,7 @@ This is a basic calculator made with HTML, CSS and JavaScript, it also works wit
 - Remainder
 - Plus/minus
 - Clear
+- Keyboard input
 
 ## Bugs:
 - Extremely large numbers will cause the equals sign to disappear.
