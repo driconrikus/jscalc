@@ -1,6 +1,6 @@
-# JSCalc, a simple calculator app!
+# JSCalc 1.0, a simple calculator web app!
 
-This is a basic calculator made with HTML, CSS and JavaScript.
+This is a basic calculator made with HTML, CSS and JavaScript, it also works with your keyboard!
 
 ## What's working:
 - Addition
@@ -12,8 +12,7 @@ This is a basic calculator made with HTML, CSS and JavaScript.
 - Clear
 
 ## Bugs:
-- ~Clicking an operator after clearing displays "undefined"~ Fixed as of commit af70a31.
-- Large numbers go over the screen.
+- Extremely large numbers will cause the equals sign to disappear.
 
 ## Preview:
 
