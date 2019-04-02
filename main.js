@@ -54,9 +54,9 @@ function clickPeriod() {
 
 // Clear button input.
 function clickClear() {
-    currentNumber = undefined;
+    currentNumber = 0;
     storedNumber = 0;
-    result = undefined;
+    result = 0;
     pendingOperation = '';
     digitAfterPeriod = 0;
     displayStoredContent('');
