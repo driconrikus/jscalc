@@ -1,11 +1,11 @@
-// global functions
+// Calculator functions
 let add = (a, b) => a+b;
 let substract = (a, b) => a-b;
 let multiply = (a, b) => Math.floor(a*b*10000)/10000;
 let divide = (a, b) => b === 0 ? NaN : Math.floor(a*10000/b)/10000;
 let operate = (operator, a, b) => operations[operator](a,b);
 
-// global variables
+// Variables & Constants
 let currentNumber;
 let storedNumber;
 let result;
@@ -13,7 +13,6 @@ let digitAfterPeriod;
 let pendingOperation;
 const screenInput = document.querySelector('#input');
 const screenOperation = document.querySelector('#output');
-const maxDisplay = 10;
 const operations = {add, substract, multiply, divide};
 const operationToSymbol = {
     add: '+',
@@ -22,8 +21,10 @@ const operationToSymbol = {
     divide: '÷'
 };
 
+// Starts at 0 when the app loads for the first time.
 window.onload = clickClear();
 
+// Number buttons input
 function clickDigit(digit) {
     if (dispError()) return;
     if (screenOperation.textContent.slice(-1) === '=') {
@@ -39,7 +40,7 @@ function clickDigit(digit) {
     }
     displayCurrentNumber();
 }
-
+// Period button input.
 function clickPeriod() {
     if (dispError()) return;
     if (screenOperation.textContent.slice(-1) === '=') {
@@ -51,6 +52,7 @@ function clickPeriod() {
     displayCurrentNumber(currentNumber+'.');
 }
 
+// Clear button input.
 function clickClear() {
     currentNumber = undefined;
     storedNumber = 0;
@@ -61,6 +63,7 @@ function clickClear() {
     displayCurrentNumber('0');
 }
 
+// Plus minus button input.
 function clickPlusMinus() {
     if (dispError()) return;
     if (currentNumber===undefined) {
@@ -73,7 +76,7 @@ function clickPlusMinus() {
     displayStoredContent('');
     displayCurrentNumber();
 }
-
+ // Equals button input.
 function clickEquals() {
     if (dispError()) return;
     if(storedNumber === undefined && currentNumber === undefined) return;
@@ -101,7 +104,7 @@ function clickEquals() {
     pendingOperation = '';
 }
 
-
+// Operator button input.
 function clickOperator(operation) {
     if (dispError()) return;
 
@@ -133,6 +136,7 @@ function clickOperator(operation) {
     displayCurrentNumber('');
 }
 
+// Remainder button input.
 function clickRemainder() {
     if (dispError()) return;
     if (currentNumber === undefined) return;
@@ -141,6 +145,7 @@ function clickRemainder() {
     clickEquals();
 }
 
+// Error function.
 function dispError() {
     if(Number.isNaN(currentNumber) || Number.isNaN(storedNumber)) {
         displayCurrentNumber('ERROR');
@@ -149,6 +154,7 @@ function dispError() {
     return false;
 }
 
+// Display functions
 function displayCurrentNumber(text = currentNumber.toFixed(digitAfterPeriod ? digitAfterPeriod-1 : 0)) {
     screenInput.textContent = text;
 }
@@ -157,6 +163,7 @@ function displayStoredContent(text = storedNumber) {
     screenOperation.textContent = text;
 }
 
+// This enables keyboard input.
 document.addEventListener('keydown', function(event) {
     if (event.repeat) return;
     switch (event.key) {
