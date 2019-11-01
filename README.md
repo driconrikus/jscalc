@@ -17,4 +17,4 @@ This is a basic calculator made with HTML, CSS and JavaScript, it also works wit
 
 ## Preview:
 
-You can see it live [here](https://drikonricus.github.io/jscalc/).
+You can see it live [here](https://driconrikus.github.io/jscalc/).
